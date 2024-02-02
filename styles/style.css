@@ -1,0 +1,132 @@
+/* Estilos para mobile */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Cabeçalho */
+{
+    /* Estilos do cabeçalho */
+}
+
+/* Conteúdo principal */
+main {
+    /* Estilos para dispositivos móveis */
+}
+header{
+    max-width: 1440px;
+    margin: 0 auto; /* Isso centralizará o grid-container */
+    background-color: azure;
+    font-size: 30px;
+    font-weight: 700;
+    gap: 20px;
+    display: flex;
+}
+header>p{
+    width: 100%;
+}
+/* Grid container */
+.grid-container {
+    max-width: 1440px;
+    margin: 0 auto; /* Isso centralizará o grid-container */
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 1px solid #000;
+    box-shadow: 0.25rem 0.25rem 0rem #000;
+    border-radius: 8px;
+}
+
+/* Grid item */
+.grid-item {
+    padding: 20px;
+    /* Estilos dos itens do grid */
+}
+.grid-item:nth-child(1){
+    background-color: #fff;
+}
+.grid-item:nth-child(2){
+    background-color: #000;
+    position: relative;
+}
+.grid-item.image-result{
+    position: relative; /* Permitirá posicionar elementos filhos de forma absoluta */
+    background-image: url('/assets/imgs/password-flatline.svg'); /* Substitua 'caminho/da/imagem.jpg' pelo caminho real da sua imagem */
+    background-size: cover; /* Garante que a imagem cubra toda a área da div */
+}
+
+.grid-item.image-result::before {
+    content: ""; /* Cria um pseudo-elemento para aplicar o gradiente */
+    position: absolute; /* Posiciona o pseudo-elemento */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa toda a largura do elemento pai */
+    height: 100%; /* Ocupa toda a altura do elemento pai */
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0.2) 44%, rgba(0,0,0,0) 100%);
+}
+.grid-item.image-result textarea {
+    position: relative;
+    color: #000;
+    z-index: 400; /* Garante que o texto esteja sobreposta à imagem de fundo */
+    /* Outros estilos para o texto, como tamanho da fonte, etc. */
+}
+.lateral__main_txt{
+    min-height: 400px;
+}
+.lateral__main_txt textarea {
+    max-width: 100%; 
+    min-width: 500px;/* Define a largura do textarea para preencher todo o espaço disponível */
+    height: auto; /* Define a altura do textarea como automática para ajustar ao conteúdo */
+    opacity:1;
+    padding: 20px;
+    z-index: 99999999999;
+}
+/* Controles */
+.controls {
+    padding: 20px;
+    background-color: #ccc;
+    grid-column: 1 / -1; 
+    border-radius:0 0 8px 8px;
+}
+.controls>button{
+    margin: 0 10px;
+}
+
+.main__content__button,#botaoCopyResp{
+    padding: 24px;
+    position: relative;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    border: 1px solid #000;
+    box-shadow: 0.25rem 0.25rem 0rem #000;
+    z-index: 3;
+}
+.main__content__button.active{
+  
+    background-color:#ccc;
+    color: #000;
+  
+   
+}
+
+/* Rodapé */
+footer {
+    /* Estilos do rodapé */
+}
+
+/* Media query para tablets */
+@media only screen and (min-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Media query para desktops */
+@media only screen and (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}

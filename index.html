@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <header>
+       <!-- <a href="#"><img src="./assets/imgs/oracle-alura.1689860202.svg" alt="Logo da alura" aria-label="Logo da alura"></a>
+        <a href="#"><img src="./assets/imgs/oracle-one.1689860202.svg" alt="Logo da alura" aria-label="Logo da alura"></a>
+        <p class="title_section">Challenge ONE <strong>Iniciante em Programação</strong></p>
+        <p class="title_section">Sprint 01: Construa um decodificador de texto com Javascript</p>-->
+    </header>
+
+    <main class="grid-container">
+        <section class="grid-item">
+            <textarea name="" id="entrada-txt" cols="30" rows="10" placeholder="Digite aqui o texto que você quer codificar:"></textarea>
+        </section>
+        <section class="grid-item image-result">
+            
+            <div id="campo-resp" class="lateral__main_txt">
+                <h3>Resultado</h3>
+                <textarea name="resposta" id="resposta" rows="3">Digite ao lado.</textarea>
+            </div>
+        </section>
+        <div class="controls">
+            <button alt="Criptografar" aria-label="Criptografar" class="main__content__button" onclick="criptografar()" type="submit" id="criptText">Criptografar</button>
+            <button  alt="Descriptografar" aria-label="Descriptografar" id="decriptText" onclick="descriptografar()" class="main__content__button" type="submit" id="decriptText">Descriptografar</button>
+               
+        </div>
+    </main>
+
+    <footer>
+        <p></p>
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
