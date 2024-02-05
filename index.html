@@ -1,41 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo</title>
+    <title>Decodificador</title>
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-    <header>
-       <!-- <a href="#"><img src="./assets/imgs/oracle-alura.1689860202.svg" alt="Logo da alura" aria-label="Logo da alura"></a>
-        <a href="#"><img src="./assets/imgs/oracle-one.1689860202.svg" alt="Logo da alura" aria-label="Logo da alura"></a>
-        <p class="title_section">Challenge ONE <strong>Iniciante em Programação</strong></p>
-        <p class="title_section">Sprint 01: Construa um decodificador de texto com Javascript</p>-->
+    <header class="header">
+        <h1 class="header_text">  <a href="#"><img src="./assets/imgs/oracle-alura.1689860202.svg" alt="Logo da alura" aria-label="Logo da alura"></a>
+            <a href="#"><img src="./assets/imgs/oracle-one.1689860202.svg" alt="Logo da alura" aria-label="Logo da alura"></a>
+          </h1>
     </header>
-
-    <main class="grid-container">
-        <section class="grid-item">
-            <textarea name="" id="entrada-txt" cols="30" rows="10" placeholder="Digite aqui o texto que você quer codificar:"></textarea>
-        </section>
-        <section class="grid-item image-result">
-            
-            <div id="campo-resp" class="lateral__main_txt">
-                <h3>Resultado</h3>
-                <textarea name="resposta" id="resposta" rows="3">Digite ao lado.</textarea>
+    <main class="main">
+        <div class="main__description">
+            <h2 class="main__description__title">
+                Challenge ONE <strong>Iniciante em Programação</strong>
+            </h2>
+        <p class="main__description__text">Sprint 01: Construa um decodificador de texto com Javascript</p>
+        </div>
+        <div class="main__content">
+            <div class="main__content__encoder">
+                <textarea style="resize: none" id="enter-txt" class="encoder__input" cols="30" rows="10" placeholder="Insira aqui o texto a ser codificado/decodificado!"></textarea>
+                <div class="encoder__input__buttons">
+                <button onclick="codificar()" class="button">Codificar</button>
+                <button onclick="decodificar()" class="button">Decodificar</button>
+                </div>
             </div>
-        </section>
-        <div class="controls">
-            <button alt="Criptografar" aria-label="Criptografar" class="main__content__button" onclick="criptografar()" type="submit" id="criptText">Criptografar</button>
-            <button  alt="Descriptografar" aria-label="Descriptografar" id="decriptText" onclick="descriptografar()" class="main__content__button" type="submit" id="decriptText">Descriptografar</button>
-               
+            <div class="main__content__decoder">
+                <textarea style="resize: none" id="saida-de-texto" class="main__content__decoder__text" cols="30" rows="10" placeholder="O texto codificado/decodificado irá aparecer aqui" readonly></textarea>
+                <div class="decoder__input__buttons">
+                <button onclick="copiar()" class="button" id="botao-copiar">Copiar!</button>
+                <button onclick="reverter()" class="button" id="botao-reverter">Reverter!</button>
+                </div>
+            </div>
         </div>
     </main>
-
-    <footer>
-        <p></p>
+    <footer class="rodape">
+        <p class="rodape__texto">Desenvolvido por Ewerton©</p>
     </footer>
-
-    <script src="app.js" defer></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
