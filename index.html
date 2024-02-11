@@ -5,41 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decodificador</title>
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <h1 class="header_text">  <a href="#"><img src="./assets/imgs/oracle-alura.1689860202.svg" alt="Logo da alura" aria-label="Logo da alura"></a>
-            <a href="#"><img src="./assets/imgs/oracle-one.1689860202.svg" alt="Logo da alura" aria-label="Logo da alura"></a>
-          </h1>
+    <header class="b-bt">
+        <h1 class="container">
+            <a href="#"><img src="./assets/imgs/oracle-alura.1689860202.svg" alt="Logo da alura"></a>
+            <a href="#"><img src="./assets/imgs/oracle-one.1689860202.svg" alt="Logo da alura"></a>
+        </h1>
     </header>
-    <main class="main">
-        <div class="main__description">
-            <h2 class="main__description__title">
+    <main class="container">
+        <div class="description">
+            <h2>
                 Challenge ONE <strong>Iniciante em Programação</strong>
             </h2>
-        <p class="main__description__text">Sprint 01: Construa um decodificador de texto com Javascript</p>
+            <p>Sprint 01: Construa um decodificador de texto com Javascript</p>
+            <div class="inform">
+                <strong>Como funciona?</strong><br>
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere necessitatibus labore dolores inventore laboriosam eaque, vero officiis dignissimos id dolorem explicabo illo eum a, reiciendis minima ab doloribus, libero vel.
+
+            </div>
         </div>
-        <div class="main__content">
-            <div class="main__content__encoder">
-                <textarea style="resize: none" id="field-txt" class="encoder__input" cols="30" rows="10" placeholder="Insira aqui o texto a ser codificado/decodificado!"></textarea>
-                <div class="encoder__input__buttons">
-                <button onclick="codificar()" id="criptText" disabled class="button">Codificar</button>
-                <button onclick="decodificar()" id="decriptText" disabled class="button">Decodificar</button>
+
+       
+        
+        <div class="content">
+
+        
+            <div class="encoder">
+                <textarea id="field-txt" cols="30" rows="10" placeholder="Insira aqui o texto a ser codificado/decodificado!"></textarea>
+                <div class="input__buttons">
+                    <button onclick="encoder()" id="buttonCodify" >Codificar</button>
+                    <button onclick="decoder()" id="buttonDecodify">Decodificar</button>
                 </div>
             </div>
-            <div class="main__content__decoder">
-                <textarea style="resize: none" id="saida-de-texto" class="main__content__decoder__text" cols="30" rows="10" placeholder="O texto codificado/decodificado irá aparecer aqui" readonly></textarea>
-                <div class="decoder__input__buttons">
-                <button onclick="copiar()" class="button" id="botao-copiar">Copiar!</button>
-                <button onclick="reverter()" class="button" id="botao-reverter">Reverter!</button>
+            <div class="decoder">
+                <textarea id="saida-de-texto" cols="30" rows="10" placeholder="Insira aqui o texto a ser codificado/decodificado!"></textarea>
+                
+                <div class="input__buttons">
+                    <button onclick="copy()"  id="buttonCopy">Copiar</button>
+                    <button onclick="revertText()"  id="botaoRevert">Reverter</button>
                 </div>
             </div>
         </div>
     </main>
-    <footer class="rodape">
-        <p class="rodape__texto">Desenvolvido por Ewerton©</p>
+    <footer class="b-t">
+        <p class="container">Desenvolvido por Ewerton©</p>
     </footer>
     <script src="app.js"></script>
 </body>
-
 </html>
