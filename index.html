@@ -7,14 +7,13 @@
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="b-bt">
         <h1 class="container">
             <a href="#"><img src="./assets/imgs/oracle-alura.1689860202.svg" alt="Logo da alura"></a>
-            <a href="#"><img src="./assets/imgs/oracle-one.1689860202.svg" alt="Logo da alura"></a>
-        </h1>
+            </h1>
     </header>
     <main class="container">
         <div class="description">
@@ -25,8 +24,8 @@
             <div class="inform">
                 <strong>Como funciona?</strong><br>
 
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere necessitatibus labore dolores inventore laboriosam eaque, vero officiis dignissimos id dolorem explicabo illo eum a, reiciendis minima ab doloribus, libero vel.
-
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere necessitatibus labore dolores inventore laboriosam eaque, vero officiis dignissimos id dolorem explicabo illo eum a, reiciendis minima ab doloribus, libero vel.
+                </p>
             </div>
         </div>
 
@@ -38,16 +37,16 @@
             <div class="encoder">
                 <textarea id="field-txt" cols="30" rows="10" placeholder="Insira aqui o texto a ser codificado/decodificado!"></textarea>
                 <div class="input__buttons">
-                    <button onclick="encoder()" id="buttonCodify" >Codificar</button>
-                    <button onclick="decoder()" id="buttonDecodify">Decodificar</button>
+                    <button onclick="encoder()" class="buttonCodify">Codificar</button>
+                    <button onclick="decoder()" class="buttonDecodify">Decodificar</button>
                 </div>
             </div>
             <div class="decoder">
-                <textarea id="saida-de-texto" cols="30" rows="10" placeholder="Insira aqui o texto a ser codificado/decodificado!"></textarea>
+                <textarea class="resultado" id="saida-de-texto" cols="30" rows="10" placeholder="Insira aqui o texto a ser codificado/decodificado!"></textarea>
                 
                 <div class="input__buttons">
-                    <button onclick="copy()"  id="buttonCopy">Copiar</button>
-                    <button onclick="revertText()"  id="botaoRevert">Reverter</button>
+                    <button onclick="copyText()"  class="buttonCopy">Copiar</button>
+                    <button onclick="revertText()"  class="buttonRevert">Reverter</button>
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@
 box-sizing: border-box;
 }
 :root{
-  --font-default: Figtree, sans-serif;
+  --font-default: Poppins, sans-serif;
   --font-weight-regular: 400;
   --font-size-medium:    18px;
   --font-size-large:     32px;
@@ -38,6 +38,15 @@ textarea{
   border-radius: var(--border-radius);
   width: 100%;
   padding: 20px;
+  font-family: var(--font-default);
+  font-size: var(--font-size-medium);
+}
+
+.resultado{
+  background: linear-gradient(to left, rgba(255,255,255,0), rgb(255, 255, 255)), url('/assets/imgs/iconmonstr-smiley-6.svg');
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 
 
@@ -63,7 +72,7 @@ header{
 }
 
 .description{ 
-
+ 
   padding-bottom:40px;
   
   h2{
@@ -93,13 +102,15 @@ header{
     font-size: var(--font-size-medium);
     margin: 20px 0;
     background-color:var(--color-primary);
+
+   p{
+    padding: 10px 0;
+   }
   }
 
 }
 main{
-  background: linear-gradient(to left, rgba(255,255,255,0), rgb(255, 255, 255)), url('/assets/imgs/files-and-folder-two-color.svg');
-  background-size: contain;
-  background-position: right;
+ 
   height: 100%;
 }
 .content{
@@ -107,7 +118,7 @@ main{
   display: flex;
   justify-content: start;
   flex-direction: column;
-  padding: 100px 0;
+  padding:;
 
    gap:40px;
 
@@ -137,15 +148,40 @@ main{
   border:1px solid var(--color-border);
   margin-right:10px;
   font-weight: 700;
+  font-family: var(--font-default);
+  font-size: var(--font-size-medium);
+  background-size: 20px; /* Tamanho do ícone */
+  background-repeat: no-repeat;
+  background-position: 8px center; /* Posição do ícone: 8px de margem à esquerda */
+  padding-left: 35px;
   }
 
   button:hover{
   color:var(--color-primary);
   background-color: var(--color-terciary);
+
+  
   }
-
-
+ 
+  .buttonCodify{
+    background-image: url(/assets/imgs/iconmonstr-code-2.svg);
+ 
+  }
+  .buttonDecodify{
+    background-image: url(/assets/imgs/iconmonstr-code-1.svg);
+ 
+  }
+  .buttonCopy{
+    background-image: url(/assets/imgs/iconmonstr-copy-clipboard-lined.svg);
+ 
+  }
+  .buttonRevert{
+    background-image: url(/assets/imgs/iconmonstr-reload-lined.svg);
+  
+  }
+  
 }
+
 
 @media screen and (min-width:1120px) {
   
