@@ -24,8 +24,7 @@
             <div class="inform">
                 <strong>Como funciona?</strong><br>
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere necessitatibus labore dolores inventore laboriosam eaque, vero officiis dignissimos id dolorem explicabo illo eum a, reiciendis minima ab doloribus, libero vel.
-                </p>
+                <p>Quando o usuário digita o texto desejado e clica em "codificar", o texto é transformado em uma forma ilegível, utilizando algum tipo de método de codificação escolhido. Para visualizar o texto original, o usuário precisa colar o texto codificado no campo apropriado e clicar em "decodificar". O decodificador então reverte o processo de codificação, exibindo o texto original para o usuário.</p>
             </div>
         </div>
 
@@ -42,7 +41,7 @@
                 </div>
             </div>
             <div class="decoder">
-                <textarea class="resultado" id="saida-de-texto" cols="30" rows="10" placeholder="Insira aqui o texto a ser codificado/decodificado!"></textarea>
+                <textarea id="saida-de-texto" cols="30" rows="10" placeholder="Insira aqui o texto a ser codificado/decodificado!"></textarea>
                 
                 <div class="input__buttons">
                     <button onclick="copyText()"  class="buttonCopy">Copiar</button>
@@ -50,6 +49,7 @@
                 </div>
             </div>
         </div>
+        <div class="outputResult">Resultado da codificação:</div>
     </main>
     <footer class="b-t">
         <p class="container">Desenvolvido por Ewerton©</p>
