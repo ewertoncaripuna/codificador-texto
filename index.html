@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="b-bt">
@@ -34,22 +34,31 @@
 
         
             <div class="encoder">
-                <textarea id="field-txt" cols="30" rows="10" placeholder="Insira aqui o texto a ser codificado/decodificado!"></textarea>
+                <textarea id="field-txt" cols="30" oninput="checkInput('field-txt', '.buttonCodify', '.buttonDecodify')" rows="10" placeholder="Insira aqui o texto a ser codificado/decodificado!"></textarea>
                 <div class="input__buttons">
-                    <button onclick="encoder()" class="buttonCodify">Codificar</button>
-                    <button onclick="decoder()" class="buttonDecodify">Decodificar</button>
+                    <button onclick="encoder()" class="buttonCodify icon-svg" disabled>Codificar</button>
+                    <button onclick="decoder()" class="buttonDecodify icon-svg" disabled>Decodificar</button>
                 </div>
             </div>
-            <div class="decoder">
-                <textarea id="saida-de-texto" cols="30" rows="10" placeholder="Insira aqui o texto a ser codificado/decodificado!"></textarea>
-                
+            <div  id="decoder"  class="decoder">
+                <p><strong>Resultado da codificação</strong></p>
+                <input id="saida-de-texto" type="text" placeholder="Resultado da codificação" readonly style=" pointer-events: none;">
+                 
                 <div class="input__buttons">
-                    <button onclick="copyText()"  class="buttonCopy">Copiar</button>
-                    <button onclick="revertText()"  class="buttonRevert">Reverter</button>
+                    <button onclick="copyText()"  class="buttonCopy" disabled>Copiar</button>
+                    <button onclick="revertText()"  class="buttonRevert" disabled>Reverter</button>
                 </div>
             </div>
+
+           
+
         </div>
-        <div class="outputResult">Resultado da codificação:</div>
+        <div id="codificarSucesso" class="mensagemSucesso"></div>
+        <div id="decodificarSucesso" class="mensagemSucesso"></div>
+        <div id="copiarSucesso" class="mensagemSucesso"></div>
+        <div id="reverterSucesso" class="mensagemSucesso"></div>
+
+    
     </main>
     <footer class="b-t">
         <p class="container">Desenvolvido por Ewerton©</p>
