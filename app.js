@@ -13,23 +13,23 @@ function normalizeString(str) {
   return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
 
-function convert(originalString, listType) {
+function convert(originalString, listSubstitute) {
+
   originalString = normalizeString(originalString);
 
-  for (let i = 0; i < listType.length; i++) {
-    const originalChar = listType[i][0];
-    const replacement = listType[i][1];
+  for (let i = 0; i < listSubstitute.length; i++) {
+    const originalChar = listSubstitute[i][0];
+    const replacement = listSubstitute[i][1];
     const regex = new RegExp(originalChar, 'g');
     originalString = originalString.replace(regex, replacement);
   }
   return originalString;
 }
 
-function revert(modifiedString, listType) {
-
-  for (let i = 0; i < listType.length; i++) {
-    const originalChar = listType[i][0];
-    const replacement = listType[i][1];
+function revert(modifiedString, listSubstitute) {
+  for (let i = 0; i < listSubstitute.length; i++) {
+    const originalChar = listSubstitute[i][0];
+    const replacement = listSubstitute[i][1];
     const regex = new RegExp(replacement, 'g');
     modifiedString = modifiedString.replace(regex, originalChar);
   }
@@ -40,7 +40,7 @@ function encoder() {
   const originalString = document.getElementById('field-txt').value;
   const convertedString = convert(originalString, listEncoder);
   document.getElementById('saida-de-texto').value = convertedString;
-  document.querySelector('.decoder').style.backgroundImage = "url('/assets/imgs/winners-flatline.svg')";
+  document.querySelector('.decoder textarea').style.backgroundImage = "linear-gradient(rgba(3,10,20, 0.9), rgba(3,10,20, 1)), url('/assets/imgs/winners-flatline.svg')";
   showMessage('codificarSucesso', 'O Conteúdo foi codificado com sucesso!');
   enableButtons();
 }
@@ -49,6 +49,7 @@ function decoder() {
   const modifiedString = document.getElementById('field-txt').value;
   const revertedString = revert(modifiedString, listEncoder);
   document.getElementById('saida-de-texto').value = revertedString;
+  document.querySelector('.decoder textarea').style.backgroundImage = "linear-gradient(rgba(3,10,20, 0.9), rgba(3,10,20, 1)), url('/assets/imgs/winners-flatline.svg')";
   showMessage('decodificarSucesso', 'O Conteúdo foi decodificado com sucesso!');
   enableButtons();
 }
@@ -57,7 +58,8 @@ function revertText() {
   const modifiedString = document.getElementById('saida-de-texto').value;
   const originalString = revert(modifiedString, listEncoder);
   document.getElementById('saida-de-texto').value = originalString;
-  showMessage('reverterSucesso', 'O Conteúdo foi revertido com sucesso!');
+  document.querySelector('.decoder textarea').style.backgroundImage = "linear-gradient(rgba(3,10,20, 0.9), rgba(3,10,20, 1)), url('/assets/imgs/fast-working-flatline.svg')";
+   showMessage('reverterSucesso', 'O Conteúdo foi revertido com sucesso!');
  
 }
 
@@ -82,7 +84,13 @@ function checkInput(inputId, codifyButtonId, decodifyButtonId) {
   }
 }
 
+function enableButtons(){
 
+  document.querySelector('.buttonCopy').removeAttribute('disabled');
+  document.querySelector('.buttonRevert').removeAttribute('disabled');
+
+
+}
 // load focus to textarea
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -90,15 +98,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-function enableButtons(){
 
-  document.querySelector('.buttonCopy').removeAttribute('disabled');
-  document.querySelector('.buttonRevert').removeAttribute('disabled');
-
-}
 
 function showMessage(div, message) {
-  
+
   const divMessage = document.getElementById(div);
   divMessage.innerText = message;
   divMessage.style.display = 'block';
@@ -107,6 +110,7 @@ function showMessage(div, message) {
     divMessage.innerText = '';
     divMessage.style.display = 'none';
   }, 3000);
+
 }
 
 //To adjust height between encoder and decoder divs//

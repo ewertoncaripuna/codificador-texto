@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decodificador</title>
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/icons/styles.css">
 </head>
 <body>
     <header class="b-bt">
@@ -36,18 +37,19 @@
             <div class="encoder">
                 <textarea id="field-txt" cols="30" oninput="checkInput('field-txt', '.buttonCodify', '.buttonDecodify')" rows="10" placeholder="Insira aqui o texto a ser codificado/decodificado!"></textarea>
                 <div class="input__buttons">
-                    <button onclick="encoder()" class="buttonCodify icon-svg" disabled>Codificar</button>
-                    <button onclick="decoder()" class="buttonDecodify icon-svg" disabled>Decodificar</button>
+                    <button onclick="encoder()" class="buttonCodify icon-svg" disabled><i class="icon-terminal"></i>Codificar</button>
+                    <button onclick="decoder()" class="buttonDecodify icon-svg" disabled><i class="icon-code"></i>Decodificar</button>
                 </div>
             </div>
-            <div  id="decoder"  class="decoder">
-                <p><strong>Resultado da codificação</strong></p>
-                <input id="saida-de-texto" type="text" placeholder="Resultado da codificação" readonly style=" pointer-events: none;">
+            <div  id="decoder" class="decoder">
+                <textarea id="saida-de-texto" oninput="checkInput('saida-de-texto', '.buttonCopy', '.buttonRevert')"  cols="30" rows="10" placeholder="Resultado da codificação"> </textarea>
                  
                 <div class="input__buttons">
-                    <button onclick="copyText()"  class="buttonCopy" disabled>Copiar</button>
-                    <button onclick="revertText()"  class="buttonRevert" disabled>Reverter</button>
+                    <button onclick="copyText()"  class="buttonCopy" disabled><i class="icon-files-o"></i>Copiar</button>
+                    <button onclick="revertText()"  class="buttonRevert" disabled><i class="icon-ccw"></i>Reverter</button>
                 </div>
+
+                
             </div>
 
            
