@@ -1,5 +1,7 @@
 # String Encoder/Decoder
 
+[Live Demonstration](https://codificadortexto.vercel.app/).
+
 This repository contains a JavaScript application for encoding and decoding strings using a custom mapping. The application allows users to encode text based on a predefined list of character replacements and decode previously encoded text back to its original form.
 
 ## Usage
